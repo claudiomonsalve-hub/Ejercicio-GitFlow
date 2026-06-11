@@ -274,45 +274,50 @@ Responda las siguientes preguntas directamente en este archivo `README.md`.
 
 ### 1. ¿Cuál es la diferencia entre `main` y `develop` en Git-flow?
 
-Respuesta:
+Respuesta:  
+La rama `main` contiene el código estable y listo para producción. La rama `develop` contiene el código en desarrollo donde se integran las nuevas funcionalidades antes de pasar a producción.
 
 ---
 
 ### 2. ¿Por qué la funcionalidad se desarrolló en una rama `feature` y no directamente en `main`?
 
-Respuesta:
+Respuesta:  
+Porque las ramas `feature` permiten desarrollar nuevas funcionalidades de forma aislada sin afectar la versión estable del proyecto en `main`, facilitando pruebas y revisión del código.
 
 ---
 
 ### 3. ¿Qué hace el comando `git merge --no-ff`?
 
-Respuesta:
+Respuesta:  
+Realiza una fusión creando siempre un commit de merge, incluso si podría hacerse un fast-forward. Esto permite mantener el historial de la rama y ver claramente cuándo se integró una funcionalidad.
 
 ---
 
 ### 4. ¿Qué diferencia habría si Git hiciera un merge con fast-forward?
 
-Respuesta:
+Respuesta:  
+En un merge fast-forward no se crea un commit de fusión; simplemente se mueve la rama hacia adelante. Esto hace el historial más lineal, pero se pierde la evidencia de la rama feature.
 
 ---
 
 ### 5. Después del merge, ¿los commits hechos en `feature/descuento-estudiante` quedan en el historial de `develop`?
 
-Respuesta:
+Respuesta:  
+Sí, todos los commits de la rama `feature/descuento-estudiante` quedan incluidos en el historial de `develop` después del merge.
 
 ---
 
 ### 6. ¿Qué rol cumple una rama `release`?
 
-Respuesta:
+Respuesta:  
+Una rama `release` se utiliza para preparar una versión final del software, permitiendo realizar pruebas, correcciones de errores menores y ajustes antes de pasar a producción.
 
 ---
 
 ### 7. ¿Es posible usar Integración Continua con Git-flow? Justifica brevemente.
 
-Respuesta:
-
----
+Respuesta:  
+Sí, es posible. La Integración Continua puede ejecutarse sobre las ramas de Git-flow (feature, develop, release y main), automatizando pruebas y validaciones cada vez que se integran cambios para detectar errores rápidamente.
 
 ## Generar evidencia 
 
